@@ -7,3 +7,13 @@
   --bg-color: #000028;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: #FF0070;
+    --text-color: #F1B2CE;
+    --title-color: #DB00FF;
+    --title-decor-color: #000028;
+    --page-bg-image: url(../images/cover-image-dark.png);
+    --bg-color: #000028;
+  }
+}
