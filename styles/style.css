@@ -52,13 +52,16 @@ body {
   text-shadow: 4px 4px 0 var(--accent-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   margin-block-end: var(--header-title-margin-bottom);
-  display: block;
+  line-height: 82.5%;
+  align-self: center; /* Центрируем по вертикали */
+  justify-self: start; /* Выравниваем по левому краю */
 }
 
 .header {
   display: grid;
   margin-block-end: var(--header-margin-bottom);
   position: relative;
+  min-height: 100vh;
 }
 
 .header__title-text {
@@ -232,7 +235,7 @@ a:visited {
   display: grid;
   place-items: center;
   margin-block: 10px;
-  height: 90vh;
+  min-height: 100vh;
 }
 
 .footer__title {
