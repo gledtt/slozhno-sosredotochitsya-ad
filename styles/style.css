@@ -1,15 +1,14 @@
 /* Основные стили проекта.*/
 
 .page {
-  font-family: IBM Plex Mono;
-  font-weight: 700;
+  font-family: var(--main-font);
   font-style: Bold;
-  font-size: 18px;
-  margin-inline-start: 10px;
-  margin-inline-end: 10px;
+  font-size: var(--main-font-size);
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
   color: var(--text-color);
   font-weight: 400;
-  background-image: var(--img-bg);
+  background-image: var(--page-bg-image);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -44,14 +43,35 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
   margin-block-end: 55px;
+  align-self: center;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr;
+  margin-block-end: 50px;
+  
 }
 
 .header__title-text {
+  align-self: end;
+  justify-self: end;
   margin-block-end: 56px;
+}
+
+.header__theme-menu {
+  justify-self: end;
+  align-items: center;
+  margin-block-start: 65px;
 }
 
 .header__theme-menu-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .header__theme-menu-list:focus {
@@ -63,15 +83,25 @@
   outline: none;
   padding: 1.5px 13px;
   background-color: transparent;
-  color: var(--accent-color);
+  color: var(--button-color);
+  cursor: pointer;
 }
 
 .header__theme-menu-button:focus {
-  outline: 1px solid var(--border-color);
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--border-button-color);
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--border-button-color-hover);
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--border-color);
+  outline: 1px solid var(--border-button-color);
+  pointer-events: none
 }
 
 .accent-text {
@@ -79,14 +109,20 @@
 }
 
 .title-decor {
-  color:rgba(0, 0, 40, 1);
-  background-color: rgba(255, 0, 112, 1);
+  color:var(--title-decor-color);
+  background-color: var(--bg-decor-color);
   font-weight: 700;
+}
+
+.decorated-zone {
+  position: relative;
 }
 
 .decorated-zone::before {
   content: '';
   position: absolute;
+  right:0;
+  top:10px;
   width: 25px;
   height: 25px;
   border-top: 1px solid var(--accent-color);
@@ -96,6 +132,8 @@
 .decorated-zone::after {
   content: '';
   position: absolute;
+  left:0;
+  bottom: 10px;
   width: 25px;
   height: 25px;
   border-bottom: 1px solid var(--accent-color);
@@ -106,15 +144,29 @@
   font-size: 18px;
   line-height: 23.4px;
   color:var(--accent-color);
+  margin-block-end: 20px;
+}
+
+.content__text {
+  line-height: 23.4px;
+}
+
+.facts {
+  margin-block-end:20px ;
 }
 
 .content__block {
   display: grid;
   grid-template-columns: 1fr;
+  margin-block-end: 20px;
 }
 
 .content {
-  margin-block-start: 40px;
+  margin-block-end: 50px;
+}
+
+.content__subtitle {
+  margin-block-end: 10px;
 }
 
 .link {
@@ -122,23 +174,198 @@
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
+.link:hover {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: 1px solid var(--outline-link)
+}
 a:visited {
   color: inherit;
 }
 
 .card {
   display: grid;
-  grid-template-columns:  1fr;
+  grid-template-columns: 1fr;
 }
 
+.gallery {
+  margin-block-end: var(--gallery-section-margin-bottom);
+}
+
+.gallery__title {
+  margin-block-end: 20px;
+}
 
 .gallery__cards {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 10px;
 }
 
 .gallery__image {
   width: 100%;
-  object-fit: cover;
+  height: 100%;
+  object-fit: cover;  
+  display: block;
+}
+
+.footer {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+}
+
+.footer__title {
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: var(--section-padding-wide);
+  }
+  
+  .page {
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+  }
+
+  .header {
+    padding-block-start: 20px;
+  }
+  
+  .header__title-text {
+    max-width: 50%;
+  }
+  
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__title br {
+    display: none;
+  }
+  
+    .header__title {
+    white-space: nowrap;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+  
+  .content__title {
+    grid-column: 1;
+    margin: 0;
+  }
+  
+  .content__block {
+    grid-column: 2;
+  }
+
+  .content:nth-of-type(2) {
+    display: block;
+  }
+
+  .content:nth-of-type(2) .content__title {
+    margin-block-end: 20px;
+  }
+
+  .gallery {
+    --gallery-section-margin-bottom:60px;
+  }
+  
+  .gallery__cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .gallery__image:nth-child(1) {
+    grid-column: span 2;
+  }
+  
+  .gallery__image:nth-child(2) {
+    grid-column: 3;
+    grid-row: span 2;
+  }
+  
+  .gallery__image:nth-child(3) {
+    grid-column: 1;
+    grid-row: span 2;
+  }
+  
+  .gallery__image:nth-child(5) {
+    grid-column: span 2;
+  }
+  
+  .footer {
+    padding: 20px;
+  }
+  
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    align-self: center;
+    margin-block-start:0;
+  }
+
+  .header__title-br {
+    display: none;
+  }
+
+  .header__title {
+    align-items: center;
+    
+  }
+
+  .page {
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+  }
+  
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+  
+  .header__title-text {
+    max-width: 50%;
+  }
+  
+.content-three-columns .content__block {
+    grid-column: span 1;
+  }
+
+  .content:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .content:nth-of-type(2) .content__title {
+    grid-column: 1 / -1; 
+    margin-block-end: 20px;
+  }
+
+  .content--three-columns .content__block {
+  grid-column: auto;
+}
+  
 }

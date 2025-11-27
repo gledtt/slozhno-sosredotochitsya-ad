@@ -1,7 +1,21 @@
 :root {
-  --accent-color: rgba(255, 0, 112, 1);
-  --title-color:rgba(219, 0, 255, 1);
-  --text-color:rgba(241, 178, 206, 1);
-  --img-bg: url(../images/cover-image-dark.png);
+  --accent-color: #FF0070;
+  --text-color: #F1B2CE;
+  --title-color: #DB00FF;
+  --title-decor-color: #000028;
+  --page-bg-image: url(../images/cover-image-dark.png);
   --border-color: rgba(255, 0, 112, 1);
+  --bg-decor-color: #FF0070;
+  --button-color: #FF0070;
+  --border-button-color:#FF0070;
+  --border-button-color-hover:#FF007066;
+  --outline-link: #F1B2CE;
+
+  --main-font: 'IBM Plex Mono', monospace;
+  --main-font-size: 18px;
+  --section-padding: 20px 10px;
+  --internal-padding: 40px 20px;
+  --section-padding-wide: 30px 20px;
+  --internal-padding-wide: 60px 40px;
+  --gallery-section-margin-bottom: 40px 
 }
