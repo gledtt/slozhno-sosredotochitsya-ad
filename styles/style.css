@@ -67,7 +67,7 @@
 
 .header__theme-menu-list {
   list-style: none;
-  margin: 0;
+  margin-block-end: var(--theme-menu-list-margin-bottom);
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -210,7 +210,7 @@ a:visited {
 .gallery__image {
   width: 100%;
   height: 100%;
-  object-fit: cover;  
+  object-fit: cover;
   display: block;
 }
 
@@ -242,6 +242,10 @@ a:visited {
   .header {
     margin-block-start: 20px;
     --header-margin-bottom: 80px;
+  }
+
+  .header__theme-menu-list  {
+    --theme-menu-list-margin-bottom: 173px;
   }
   
   .header__title-text {
@@ -337,6 +341,7 @@ a:visited {
   
   .header__theme-menu-list {
     flex-direction: row;
+    --theme-menu-list-margin-bottom:273px;
   }
   
   .header__title-text {
@@ -355,7 +360,7 @@ a:visited {
   }
 
   .content:nth-of-type(2) .content__title {
-    grid-column: 1 / -1; 
+    grid-column: 1 / -1;
     margin-block-end: 20px;
   }
 

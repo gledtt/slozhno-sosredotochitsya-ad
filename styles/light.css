@@ -18,6 +18,15 @@
     --title-color: #FFC2E6;
     --title-decor-color: #353430;
     --page-bg-image: url(../images/cover-image-light.png);
+    --bg-decor-color: #FF8DCB;
+    --button-color: #353430;
+    --border-button-color: #353430;
+    --border-button-color-hover: #32312D66;
+    --outline-link: #353430;
+  }
+
+  .rec {
+    display: none;
   }
 }
 
