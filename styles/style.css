@@ -53,8 +53,8 @@ body {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   margin-block-end: var(--header-title-margin-bottom);
   line-height: 82.5%;
-  align-self: center; /* Центрируем по вертикали */
-  justify-self: start; /* Выравниваем по левому краю */
+  align-self: center;
+  justify-self: start;
 }
 
 .header {
@@ -273,7 +273,7 @@ a:visited {
   
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    --header-title-margin-bottom: 130px;
+    --header-title-margin-bottom: 162px;
     margin-inline-start: -20px;
   }
 
@@ -344,6 +344,7 @@ a:visited {
   
   .footer {
     margin-block: 20px;
+    height: 1024px;
   }
   
   .footer__title {
@@ -360,7 +361,7 @@ a:visited {
   }
 
   .header__title {
-    --header-title-margin-bottom: 114px;
+    --header-title-margin-bottom: 95px;
     margin-inline-start: -20px;
   }
 
@@ -411,5 +412,9 @@ a:visited {
   .content__title {
     width: 315px;
     margin-block-end: 0;
+  }
+
+  .footer {
+    height: 768px;
   }
 }
