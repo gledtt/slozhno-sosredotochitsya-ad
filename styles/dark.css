@@ -4,7 +4,13 @@
   --title-color: #DB00FF;
   --title-decor-color: #000028;
   --page-bg-image: url(../images/cover-image-dark.png);
-  --bg-color: #000028;
+  --border-color: rgba(255, 0, 112, 1);
+  --bg-decor-color: #FF0070;
+  --button-color: #FF0070;
+  --border-button-color:#FF0070;
+  --border-button-color-hover:#FF007066;
+  --outline-link: #F1B2CE;
+  --title-text-color: #FF0070;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,6 +20,12 @@
     --title-color: #DB00FF;
     --title-decor-color: #000028;
     --page-bg-image: url(../images/cover-image-dark.png);
-    --bg-color: #000028;
+    --border-color: rgba(255, 0, 112, 1);
+    --bg-decor-color: #FF0070;
+    --button-color: #FF0070;
+    --border-button-color:#FF0070;
+    --border-button-color-hover:#FF007066;
+    --outline-link: #F1B2CE;
+    --title-text-color: #FF0070;
   }
 }

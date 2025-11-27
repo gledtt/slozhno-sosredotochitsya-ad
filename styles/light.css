@@ -10,6 +10,7 @@
   --border-button-color-hover: #32312D66;
   --outline-link: #353430;
   --title-text-color: #353430;
+  --border-color: #353430;
 }
 
 @media (prefers-color-scheme: light) {
@@ -24,6 +25,7 @@
     --border-button-color: #353430;
     --border-button-color-hover: #32312D66;
     --outline-link: #353430;
+    --title-text-color: #353430;
   }
 
   .rec {

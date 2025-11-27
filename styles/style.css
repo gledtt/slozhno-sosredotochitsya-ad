@@ -1,4 +1,8 @@
 /* Основные стили проекта.*/
+body {
+  margin: 0;
+  padding: 0;
+}
 
 .page {
   font-family: var(--main-font);
@@ -47,21 +51,17 @@
 
 .header {
   display: grid;
-  grid-template-rows: 1fr;
   margin-block-end: var(--header-margin-bottom);
   position: relative;
-  
 }
 
 .header__title-text {
-  align-self: end;
   justify-self: end;
   margin-block-end: var(--header-title-text-margin-bottom);
 }
 
 .header__theme-menu {
   justify-self: end;
-  align-items: center;
   margin-block-start: 75px;
 }
 
@@ -124,8 +124,8 @@
   top:0;
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
 }
 
 .decorated-zone::after {
@@ -135,8 +135,8 @@
   bottom: 0;
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
 }
 
 .content__title {
@@ -252,12 +252,10 @@ a:visited {
     height:1024px;
   }
 
-  .header__theme-menu-list {
-    --theme-menu-list-margin-bottom: 173px;
-  }
-
   .header__theme-menu {
-    margin-block-start: 192px;
+    margin-block-start: 172px;
+    height: 100px;
+    margin-block-end: 173px;
   }
   
   .header__title-text {
@@ -350,6 +348,8 @@ a:visited {
   .header__theme-menu {
     justify-self: center;
     margin-block-start:0;
+    height: 26px;
+    margin-bottom: 273px;
   }
 
   .header {
@@ -369,7 +369,6 @@ a:visited {
   
   .header__theme-menu-list {
     flex-direction: row;
-    --theme-menu-list-margin-bottom:273px;
   }
   
   .header__title-text {
