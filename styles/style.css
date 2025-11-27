@@ -1,5 +1,144 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* Основные стили проекта.*/
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: IBM Plex Mono;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 18px;
+  margin-inline-start: 10px;
+  margin-inline-end: 10px;
+  color: var(--text-color);
+  font-weight: 400;
+  background-image: var(--img-bg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.rec {
+  position: absolute;
+  top: 10px;
+  right: 19px;
+  color: var(--accent-color);
+  line-height: 25px;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-align: center;
+}
+
+.rec::after {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  margin-left: 10px;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+.header__title {
+  color:var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  margin-block-end: 55px;
+}
+
+.header__title-text {
+  margin-block-end: 56px;
+}
+
+.header__theme-menu-list {
+  list-style: none;
+}
+
+.header__theme-menu-list:focus {
+  outline: none;
+}
+
+.header__theme-menu-button {
+  border: none;
+  outline: none;
+  padding: 1.5px 13px;
+  background-color: transparent;
+  color: var(--accent-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: 1px solid var(--border-color);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--border-color);
+}
+
+.accent-text {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.title-decor {
+  color:rgba(0, 0, 40, 1);
+  background-color: rgba(255, 0, 112, 1);
+  font-weight: 700;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+}
+
+.content__title {
+  font-size: 18px;
+  line-height: 23.4px;
+  color:var(--accent-color);
+}
+
+.content__block {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.content {
+  margin-block-start: 40px;
+}
+
+.link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+a:visited {
+  color: inherit;
+}
+
+.card {
+  display: grid;
+  grid-template-columns:  1fr;
+}
+
+
+.gallery__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gallery__image {
+  width: 100%;
+  object-fit: cover;
 }
