@@ -62,14 +62,14 @@ body {
 .header {
   position: relative;
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto min-content min-content;
   align-items: start;
   min-height: 100vh;
   margin-block: 10px 50px;
-  padding-block-end: 56px;
 }
 
 .header__title-text {
+  margin-block-end: 35px;
   justify-self: end;
 }
 
@@ -261,7 +261,7 @@ a:visited {
 
   .header {
     margin-block: 20px 80px;
-    padding-block-end: 163px;
+    padding-block-end: 123px;
   }
 
   .header__theme-menu {
@@ -273,6 +273,7 @@ a:visited {
   .header__title-text {
     max-width: 50%;
     --header-title-text-margin-bottom: 163px;
+    margin: 0;
   }
 
   .header__title {
